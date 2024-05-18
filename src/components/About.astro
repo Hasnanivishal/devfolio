@@ -1,46 +1,65 @@
 ---
 import { Image } from "astro:assets";
-import Avatar_250 from "../Avatar_250.webp";
+import Avatar_200 from "../Avatar_200.jpeg";
 import { SectionTitle } from "./UI";
 ---
 
 <section id="about" class="w-full min-h-screen px-6 py-4 pt-14 bg-background">
-    <SectionTitle
-        title="About Me"
-        color="purple"
-        className="h-screen flex flex-col justify-center"
-    >
-        <div class="flex_center flex-col lg:flex-row w-full h-full py-10 gap-8">
-            <Image
-                src={Avatar_250}
-                alt="About_Avatar"
-                class="Fade_Up rounded-full scale-x-[-1] lg:mx-14"
-                width={225}
-                height={225}
-                loading="lazy"
-            />
-
-            <div
-                class="Fade_Up w-full md:w-[80%] lg:w-[60%] flex justify-center items-start flex-col gap-4 lg:border-l border-purple py-8 lg:pl-10"
-            >
-                <h2 class="Fade_Up text-[1.5em] font-bold">Hey there! 👋🏻</h2>
-                <p class="Fade_Up text-justify">
-                    I'm Vishal Hasnani, a Full stack web developer with a strong passion
-                    for crafting digital realms that captivate and inspire.
-                </p>
-                <p class="Fade_Up text-justify">
-                    I specialize in creating dynamic and interactive UI/UX
-                    experience. I stay up to date with the latest tools and
-                    techniques and worked on a wide range of projects, from
-                    personal websites to large-scale applications, sharpening my
-                    problem solving skills and fostering creativity.
-                </p>
-                <p class="Fade_Up text-justify">
-                    If you're seeking a dedicated and passionate web developer,
-                    I'm eager to collaborate with you. Let's bring your ideas to
-                    life!
-                </p>
-            </div>
+  <SectionTitle
+    title="About Me"
+    color="purple"
+    className="h-screen flex flex-col justify-center"
+  >
+    <div class="flex_center flex-col lg:flex-row w-full h-full py-10 gap-8">
+      <div
+        class="Hero_Orbit relative flex_center w-[360px] lg:w-[500px] aspect-square"
+      >
+        <div
+          class="Spring_Up flex_center w-[50%] aspect-square rounded-full z-10"
+        >
+          <Image
+            src={Avatar_200}
+            alt="About_Avatar"
+            class="Fade_Up object-[-24px] rounded-[10%] lg:mx-14"
+            width={225}
+            height={225}
+            loading="lazy"
+          />
         </div>
-    </SectionTitle>
+        <div class="Spring_Up Hero_Trail Trail1">
+          <span class="Orbit_Dot"></span>
+        </div>
+        <div class="Spring_Up Hero_Trail Trail2">
+          <span class="Orbit_Dot"></span>
+        </div>
+        <div class="Spring_Up Hero_Trail Trail3">
+          <span class="Orbit_Dot"></span>
+        </div>
+        <div class="Spring_Up Hero_Trail Trail4">
+          <span class="Orbit_Dot"></span>
+        </div>
+      </div>
+
+      <div
+        class="Fade_Up w-full md:w-[80%] lg:w-[60%] flex justify-center items-start flex-col gap-4 lg:border-l border-purple py-8 lg:pl-10"
+      >
+        <h2 class="Fade_Up text-[1.5em] font-bold">Hey there! 👋🏻</h2>
+        <p class="Fade_Up text-justify">
+          I'm Vishal Hasnani, a Full stack web developer with a strong passion
+          for crafting digital realms that captivate and inspire.
+        </p>
+        <p class="Fade_Up text-justify">
+          I specialize in creating dynamic and interactive UI/UX experience. I
+          stay up to date with the latest tools and techniques and worked on a
+          wide range of projects, from personal websites to large-scale
+          applications, sharpening my problem solving skills and fostering
+          creativity.
+        </p>
+        <p class="Fade_Up text-justify">
+          If you're seeking a dedicated and passionate web developer, I'm eager
+          to collaborate with you. Let's bring your ideas to life!
+        </p>
+      </div>
+    </div>
+  </SectionTitle>
 </section>
