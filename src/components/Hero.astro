@@ -9,7 +9,7 @@ import {
 } from "../assets/SVGs";
 import Avatar_180 from "../Avatar_180.webp";
 import Avatar_250 from "../Avatar_250.webp";
-import { Typed } from "./Preact";
+import { Main, Typed } from "./Preact";
 ---
 
 <section
@@ -152,4 +152,6 @@ import { Typed } from "./Preact";
             <span class="Orbit_Dot"></span>
         </div>
     </div>
+
+    <Main client:only="react" />
 </section>
