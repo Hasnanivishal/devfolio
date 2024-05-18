@@ -1,4 +1,4 @@
-import { useRef, useEffect } from "preact/hooks";
+import { useRef, useEffect } from "react";
 import * as TypingJs from "typed.js";
 
 const Typed = () => {

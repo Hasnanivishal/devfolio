@@ -1,23 +1,14 @@
 ---
+import ExperienceDetails from "./Preact/ExperienceDetails";
 import { CenterTitle } from "./UI";
-import { ContactForm } from "./Preact";
-import { Image } from "astro:assets";
 ---
 
 <section
-    id="experience"
-    class="w-full min-h-screen mb-16 lg:mb-[15em] px-6 py-4 pt-14 bg-background"
+  id="experience"
+  class="w-full min-h-screen mb-16 lg:mb-[1em] px-6 py-4 pt-14 bg-background"
 >
-    <CenterTitle title="Experience" color="purple" />
+  <CenterTitle title="Experience" color="purple" />
 
-    <div class="w-full flex_center flex-col p-4 text-[1.2em] text-center">
-        <h3
-            class="Fade_Up gradientText font-ubuntu text-[2rem] lg:text-[2.4rem]"
-        >
-            Let's collaborate!
-        </h3>
-        <p class="Fade_Up">Contact me to discuss your web development needs</p>
-        <p class="Fade_Up">or just to say hello. 😉</p>
-    </div>
+  <ExperienceDetails client:only="react" />
 
 </section>

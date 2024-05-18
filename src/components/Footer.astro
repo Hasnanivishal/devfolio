@@ -6,9 +6,9 @@ import {
   GithubIcon,
   InstagramIcon,
   LinkedinIcon,
-  LogoIcon,
   TwitterIcon,
   PurpleWave,
+  GmailIcon,
 } from "../assets/SVGs";
 import ThankYou from "./Preact/ThankYou";
 
@@ -24,53 +24,29 @@ const currentYear = new Date().getFullYear();
     class="absolute -translate-y-full pb-4 w-full"
   />
 
-  <!-- <div class="w-full flex_center flex-col gap-2">
-        <Image src={LogoIcon} alt="LogoIcon" width={80} height={80} />
-        <span>ChiragChrg | Portfolio</span>
-    </div> -->
-
   <div class="grid place-content-center">
     <p class="diff-font text-4xl lg:text-6xl">Vishal Hasnani</p>
   </div>
 
-  <div class="grid grid-cols-3 lg:grid-cols-6 gap-x-20 gap-y-10 lg:gap-20">
+  <div class="grid grid-cols-3 lg:grid-cols-3 gap-x-20 gap-y-10 lg:gap-20">
     <a
-      href="https://www.facebook.com/ChiragChrg/"
+      href="https://www.linkedin.com/in/vishal-hasnani-7b4028143/"
       target="_blank"
       rel="noreferrer"
     >
-      <Image src={FaceBookIcon} alt="FaceBook" width={30} height={30} />
+      <Image src={LinkedinIcon} alt="LinkedIn" width={30} height={30} />
     </a>
-    <a href="https://x.com/ChrgChirag" target="_blank" rel="noreferrer">
-      <Image src={TwitterIcon} alt="Twitter X" width={30} height={30} />
+
+    <a href="https://github.com/Hasnanivishal" target="_blank" rel="noreferrer">
+      <Image src={GithubIcon} alt="Github" width={30} height={30} />
     </a>
-    <a
-      href="https://www.instagram.com/chiragchrg/"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <Image src={InstagramIcon} alt="Instagram" width={30} height={30} />
-    </a>
-    <a
-      href="https://in.linkedin.com/in/chiragchrg"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <Image src={LinkedinIcon} alt="Discord" width={30} height={30} />
-    </a>
-    <a href="https://github.com/ChiragChrg" target="_blank" rel="noreferrer">
-      <Image src={GithubIcon} alt="Discord" width={30} height={30} />
-    </a>
-    <a
-      href="https://discord.com/invite/8ngPa6tE"
-      target="_blank"
-      rel="noreferrer"
-    >
-      <Image src={DiscordIcon} alt="Discord" width={30} height={30} />
+
+    <a href="mailto:hasnanivishal@gmail.com" target="_blank" rel="noreferrer">
+      <Image src={GmailIcon} alt="Gmail" width={30} height={30} />
     </a>
   </div>
 
   <span>© Copyright 2017-{currentYear}</span>
 
-  <ThankYou client:load />
+  <ThankYou client:only="react" />
 </footer>

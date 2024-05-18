@@ -1,4 +1,5 @@
-import { useState, useEffect } from "preact/hooks";
+import { useState, useEffect } from "react";
+import React from "react";
 
 const thankyouList = [
   "thank you",
@@ -37,7 +38,7 @@ const ThankYou = () => {
   }, [currThank]);
 
   return (
-    <div class="grid place-content-end text-2xl font-semibold w-full diff-font-one">
+    <div className="grid place-content-end text-2xl font-semibold w-full diff-font-one">
       <p>
         {currThank === "شكراً" && "!"} {currThank}{" "}
         {currThank !== "شكراً" && "!"}
