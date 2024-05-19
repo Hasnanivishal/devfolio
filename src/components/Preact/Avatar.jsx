@@ -4,16 +4,21 @@ Command: npx gltfjsx@6.2.16 public/models/6648ed1e515d91cf7878c483.glb
 */
 
 import React, { useEffect, useRef } from "react";
-import { useGLTF } from "@react-three/drei";
+import { useAnimations, useFBX, useGLTF } from "@react-three/drei";
 
 export default function Avatar(props) {
-  const { nodes, materials } = useGLTF("/models/6648ed1e515d91cf7878c483.glb");
   const group = useRef();
+  const { nodes, materials } = useGLTF("/models/6648ed1e515d91cf7878c483.glb");
+
+  const { animations: typingAnimation } = useFBX("/animations/Typing.fbx");
+  typingAnimation[0].name = "Typing";
+
+  const { actions, mixer } = useAnimations(typingAnimation, group);
 
   useEffect(() => {
-    console.log("Scene:", nodes);
-    console.log("Animations:", materials);
-  }, [nodes, materials]);
+    console.log("actions", actions, mixer);
+    actions["Typing"].fadeIn(0.5).play();
+  }, [mixer]);
 
   return (
     <group {...props} ref={group} dispose={null}>
