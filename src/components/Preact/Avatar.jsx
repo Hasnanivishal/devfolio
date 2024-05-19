@@ -17,7 +17,7 @@ export default function Avatar(props) {
 
   useEffect(() => {
     console.log("actions", actions, mixer);
-    actions["Typing"].fadeIn(0.5).play();
+    actions["Typing"].play();
   }, [mixer]);
 
   return (
